@@ -32,11 +32,10 @@ predictions = model.predict(X_test)
 sb.distplot(y_test - predictions, axlabel="Test - Prediction")
 py.show()
 
-# Predicts the Sex given the Input (Change Here)
-# 94 -> 94 Kg (Weight)
-# 182 -> 182 cm (Height)
-
-myvals = np.array([94, 182]).reshape(1, -1)
+# Predicts the Sex given the Input by height and weight(Change Here)
+height= 182
+weight= 94
+myvals = np.array([weight, height]).reshape(1, -1)
 print(model.predict(myvals))
 
 # The more close to 0, the more is a Male
